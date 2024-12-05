@@ -1,57 +1,351 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raise a Child Foundation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Raise a Child Foundation
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
             font-family: 'Roboto', sans-serif;
         }
-    </style>
-</head>
-<body class="bg-white text-gray-800">
-
-    <!-- Navigation Bar -->
-    <nav class="bg-purple-700 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">RAC Foundation</a>
-            <div class="space-x-4">
-                <a href="index.html" class="hover:text-orange-500">Home</a>
-                <a href="about.html" class="hover:text-orange-500">About Us</a>
-                <a href="objectives.html" class="hover:text-orange-500">Our Objectives</a>
-                <a href="contact.html" class="hover:text-orange-500">Contact</a>
-                <a href="donate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Donate</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Landing Page -->
-    <header class="relative h-screen bg-cover bg-center" style="background-image: url('./images/hero_1.jpg');">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white relative z-10">
-            <h1 class="text-5xl font-bold">Raise a Child Foundation</h1>
-            <p class="text-2xl mt-4">Empowering Children for a Brighter Tomorrow</p>
-            <a href="about.html" class="mt-8 bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600">Learn More</a>
-        </div>
-    </header>
-
-    <!-- Footer -->
-    <footer class="bg-purple-700 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div>
-                <p>&copy; 2023 Raise a Child Foundation</p>
-            </div>
-            <div class="space-x-4">
-                <a href="#" class="hover:text-orange-500"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-orange-500"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-orange-500"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-orange-500"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </footer>
-
-</body>
+  </style>
+ </head>
+ <body class="bg-white text-gray-800">
+  <!-- Navigation Bar -->
+  <nav class="bg-purple-700 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <a class="text-2xl font-bold" href="index.html">
+     RAC Foundation
+    </a>
+    <div class="space-x-4">
+     <a class="hover:text-orange-500" href="index.html">
+      Home
+     </a>
+     <a class="hover:text-orange-500" href="about.html">
+      About Us
+     </a>
+     <a class="hover:text-orange-500" href="objectives.html">
+      Our Objectives
+     </a>
+     <a class="hover:text-orange-500" href="contact.html">
+      Contact
+     </a>
+     <a class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded" href="donate.html">
+      Donate
+     </a>
+    </div>
+   </div>
+  </nav>
+  <!-- Landing Page -->
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url('./images/hero_1.jpg');">
+   <div class="absolute inset-0 bg-black opacity-50">
+   </div>
+   <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white relative z-10">
+    <h1 class="text-5xl font-bold">
+     Raise a Child Foundation
+    </h1>
+    <p class="text-2xl mt-4">
+     Empowering Children for a Brighter Tomorrow
+    </p>
+    <a class="mt-8 bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded" href="about.html">
+     Learn More
+    </a>
+   </div>
+  </header>
+  
+  <!-- About Us Page -->
+  <section class="py-12">
+   <div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8">
+     About Us
+    </h2>
+    <p class="text-lg mb-8">
+     Raise a Child Foundation (RAC) is a Kenyan non-governmental organization focused on assisting needy children. Our mission is to empower children for a brighter tomorrow by providing essential resources and support.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div>
+      <img alt="Children benefiting from the foundation's efforts, smiling and holding school supplies" class="w-full rounded-lg shadow-lg" height="400" src="https://storage.googleapis.com/a1aa/image/j33RdKOB587ELpbo65xYj85NdFVtLAJZFpDlNiljFNIuIf7JA.jpg" width="600"/>
+     </div>
+     <div>
+      <h3 class="text-2xl font-bold mb-4">
+       Our Mission
+      </h3>
+      <p class="mb-4">
+       To provide essential resources and support to needy children, ensuring they have the opportunity to succeed and thrive.
+      </p>
+      <h3 class="text-2xl font-bold mb-4">
+       Our Vision
+      </h3>
+      <p class="mb-4">
+       A world where every child has access to education, healthcare, and the support they need to reach their full potential.
+      </p>
+      <h3 class="text-2xl font-bold mb-4">
+       Core Values
+      </h3>
+      <ul class="list-disc list-inside">
+       <li>
+        Compassion
+       </li>
+       <li>
+        Integrity
+       </li>
+       <li>
+        Empowerment
+       </li>
+       <li>
+        Inclusivity
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Timeline Section -->
+  <section class="bg-gray-100 py-12">
+   <div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8">
+     Our Journey
+    </h2>
+    <div class="space-y-8">
+     <div class="flex items-center">
+      <div class="w-1/3">
+       <img alt="Foundation's first event with children in a community setting" class="w-full rounded-lg shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/iMoV7Nng3oqwGBwmKAZplu40llnx3zOfgNMFCSxBBVLei83TA.jpg" width="400"/>
+      </div>
+      <div class="w-2/3 pl-8">
+       <h3 class="text-2xl font-bold mb-2">
+        2010 - Foundation Established
+       </h3>
+       <p>
+        Raise a Child Foundation was established with the goal of supporting needy children in Kenya.
+       </p>
+      </div>
+     </div>
+     <div class="flex items-center">
+      <div class="w-1/3">
+       <img alt="Children receiving school supplies from the foundation" class="w-full rounded-lg shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/4jl6Suvg2ZKEFZb5d0gwree52FJ2eyA3i9j60btMGIW3F5vnA.jpg" width="400"/>
+      </div>
+      <div class="w-2/3 pl-8">
+       <h3 class="text-2xl font-bold mb-2">
+        2012 - First Major Donation Drive
+       </h3>
+       <p>
+        We organized our first major donation drive, providing school supplies to over 500 children.
+       </p>
+      </div>
+     </div>
+     <div class="flex items-center">
+      <div class="w-1/3">
+       <img alt="Children participating in a motivational education retreat" class="w-full rounded-lg shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/K0P4cEAoZippARcQ5qy99RiHLT88HgV0NLaejlLxdM4ZRe3TA.jpg" width="400"/>
+      </div>
+      <div class="w-2/3 pl-8">
+       <h3 class="text-2xl font-bold mb-2">
+        2015 - Education Retreats
+       </h3>
+       <p>
+        We began organizing motivational education retreats to inspire and empower children.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Our Objectives Page -->
+  <section class="py-12">
+   <div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8">
+     Our Objectives
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+     <div class="text-center">
+      <img alt="Icon representing menstrual hygiene awareness" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/tThRc3B7QY5dGdFT9Bb5DZtfiBlfIsLRU9TfhFDNWpppF5vnA.jpg" width="100"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Menstrual Hygiene Awareness
+      </h3>
+      <p>
+       We promote menstrual hygiene awareness to ensure girls can attend school without interruption.
+      </p>
+     </div>
+     <div class="text-center">
+      <img alt="Icon representing donations for school essentials" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/XAEbgTPBXBrNNdZDOto6TLQU4KYI3TnUod6dxJZi8c0tIf7JA.jpg" width="100"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Donations for School Essentials
+      </h3>
+      <p>
+       We collect and distribute school supplies to children in need, ensuring they have the tools to succeed.
+      </p>
+     </div>
+     <div class="text-center">
+      <img alt="Icon representing motivational education retreats" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/EftO7LflfwIzLIMj4fxyjmkVK9VJygRk2qmZ4ZCco1abLyfeE.jpg" width="100"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Motivational Education Retreats
+      </h3>
+      <p>
+       We organize retreats to inspire and motivate children to pursue their education and dreams.
+      </p>
+     </div>
+     <div class="text-center">
+      <img alt="Icon representing orphanage visits and equal education opportunities" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/7EGf1NegjqimWEm3OpNfURfZ6mcKneODCobEpf0f4ZKvcRe3TA.jpg" width="100"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Orphanage Visits and Equal Education Opportunities
+      </h3>
+      <p>
+       We visit orphanages and advocate for equal education opportunities for all children.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Call to Action Section -->
+  <section class="bg-purple-700 text-white py-12">
+   <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4">
+     Get Involved
+    </h2>
+    <p class="text-lg mb-8">
+     Join us in making a difference in the lives of children. Your support can change their future.
+    </p>
+    <a class="bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded" href="donate.html">
+     Donate Now
+    </a>
+    <a class="ml-4 bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded" href="volunteer.html">
+     Volunteer
+    </a>
+   </div>
+  </section>
+  <!-- Contact Page -->
+  <section class="py-12">
+   <div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8">
+     Contact Us
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div>
+      <h3 class="text-2xl font-bold mb-4">
+       Get in Touch
+      </h3>
+      <form action="#" class="space-y-4" method="POST">
+       <div>
+        <label class="block text-lg font-medium" for="name">
+         Name
+        </label>
+        <input class="w-full border border-gray-300 p-2 rounded" id="name" name="name" required="" type="text"/>
+       </div>
+       <div>
+        <label class="block text-lg font-medium" for="email">
+         Email
+        </label>
+        <input class="w-full border border-gray-300 p-2 rounded" id="email" name="email" required="" type="email"/>
+       </div>
+       <div>
+        <label class="block text-lg font-medium" for="subject">
+         Subject
+        </label>
+        <input class="w-full border border-gray-300 p-2 rounded" id="subject" name="subject" required="" type="text"/>
+       </div>
+       <div>
+        <label class="block text-lg font-medium" for="message">
+         Message
+        </label>
+        <textarea class="w-full border border-gray-300 p-2 rounded" id="message" name="message" required="" rows="4"></textarea>
+       </div>
+       <button class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded" type="submit">
+        Send Message
+       </button>
+      </form>
+     </div>
+     <div>
+      <h3 class="text-2xl font-bold mb-4">
+       Contact Details
+      </h3>
+      <p class="mb-4">
+       <strong>
+        Founder:
+       </strong>
+       Annete Achieng Adero
+      </p>
+      <p class="mb-4">
+       <strong>
+        Phone:
+       </strong>
+       0728 759 690
+      </p>
+      <p class="mb-4">
+       <strong>
+        Email:
+       </strong>
+       aderoannete@gmail.com
+      </p>
+      <h3 class="text-2xl font-bold mb-4">
+       FAQ
+      </h3>
+      <div class="space-y-4">
+       <div>
+        <h4 class="text-lg font-bold">
+         How can I donate?
+        </h4>
+        <p>
+         You can donate through our website by clicking the "Donate" button on the top right corner of the page.
+        </p>
+       </div>
+       <div>
+        <h4 class="text-lg font-bold">
+         How can I volunteer?
+        </h4>
+        <p>
+         You can sign up to volunteer by visiting our "Volunteer" page and filling out the form.
+        </p>
+       </div>
+       <div>
+        <h4 class="text-lg font-bold">
+         Where is the foundation located?
+        </h4>
+        <p>
+         We are located in Nairobi, Kenya. You can find our exact location on the map below.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   
+  </section>
+  <!-- Google Maps Embed (Optional) -->
+  <section class="py-12">
+   <div class="container mx-auto">
+    <iframe allowfullscreen="" height="450" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.123456789!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDE3JzMyLjQiTiAzNsKwNDknMTkuMCJF!5e0!3m2!1sen!2ske!4v1616161616161!5m2!1sen!2ske" style="border:0;" width="100%">
+    </iframe>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-purple-700 text-white py-6">
+    <div class="container mx-auto text-center">
+     <div class="mb-4">
+      <a class="mx-2" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="mx-2" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="mx-2" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a class="mx-2" href="#">
+       <i class="fab fa-linkedin-in">
+       </i>
+      </a>
+     </div>
+     <p>
+      Contact us: 0728 759 690 | aderoannete@gmail.com
+     </p>
+    </div>
+   </footer>
+ </body>
 </html>
