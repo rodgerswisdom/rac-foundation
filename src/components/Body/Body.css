@@ -36,7 +36,7 @@
 }
 
 .journey-image {
-    width: 300px; /* Adjust width as needed */
+    width: 300px; 
     height: auto;
     object-fit: cover;
 }
