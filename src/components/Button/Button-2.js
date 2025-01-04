@@ -2,7 +2,7 @@ import "./Button-2.css";
 
 function Button2() {
     return(
-        <button className="learn-more">learn More</button>
+        <button className="learn-more additional">learn More</button>
     )
 }
 

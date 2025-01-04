@@ -2,8 +2,8 @@
     margin-top: 2rem;
     padding: 10px 20px;
     font-size: 1.2rem;
-    background-color: #6482e2; /* Button color */
-    border: none;
+    background-color: rgba(31, 49, 110, 0.466); /* Button color */
+    border: 2px solid #ebecf1;
     color: white;
     cursor: pointer;
     border-radius: 5px;

@@ -8,8 +8,11 @@ function Footer() {
                     <h3>Useful Links</h3>
                     <ul>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#careers">Careers</a></li>
-                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#mission">Mission</a></li>
+                        <li><a href="#vision">Vision</a></li>
+                        <li><a href="#news">News & Events</a></li>
+                        <li><a href="#contact-us">Contact us</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div className="footer-column">
