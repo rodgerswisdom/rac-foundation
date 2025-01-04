@@ -14,17 +14,19 @@ function Footer() {
             <div className="footer-column">
                 <h3>Support</h3>
                 <ul>
-                    <li><a href="#consulting">Consulting</a></li>
-                    <li><a href="#development">Development</a></li>
-                    <li><a href="#design">Design</a></li>
+                    <li><a href="#consulting">FAQs</a></li>
+                    <li><a href="#development">Help Center</a></li>
+                    
                 </ul>
             </div>
             <div className="footer-column">
                 <h3>Follow Us</h3>
                 <ul>
-                    <li><a href="#email">Email</a></li>
-                    <li><a href="#phone">Phone</a></li>
-                    <li><a href="#location">Location</a></li>
+                    <li><a href="#email">Facebook</a></li>
+                    <li><a href="#phone">Instagram</a></li>
+                    <li><a href="#location">X</a></li>
+                    <li><a href="#phone">TikTok</a></li>
+
                 </ul>
             </div>
         </div>
