@@ -1,12 +1,27 @@
 .support-us {
-    margin-top: 2rem;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #ff7b00; /* Button color */
-    border: none;
-    color: rgb(7, 6, 6);
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ff7b00; /* Button color */
+  border: none;
+  color: rgb(7, 6, 6);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .support-us {
+    padding: 8px 16px;
+    font-size: 1rem;
   }
-  
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+  .support-us {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

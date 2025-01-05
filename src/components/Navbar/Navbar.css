@@ -2,7 +2,7 @@
   padding: 10px 20px;
   position: relative;
   display: flex;
-  justify-content: space-between; /* Adjust space between logo and links */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -16,12 +16,14 @@
 .nav-logo {
   height: 50px;
   margin-right: 20px;
+  position: absolute;
+  left: 20px;
 }
 
 .nav-links {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   gap: 20px;
 }
@@ -32,4 +34,37 @@
   font-weight: 700;
   color: rgb(28, 33, 138);
   cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 10px; /* Reduce gap between items on tablets */
+  }
+
+  .nav-links li {
+    padding: 8px;
+    font-size: 14px; /* Adjust font size for better spacing */
+  }
+
+  .nav-logo {
+    height: 40px; /* Adjust logo size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column; /* Stack links vertically on mobile */
+    gap: 2px;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 15px; /* Smaller font for mobile */
+  }
+
+  .nav-logo {
+    height: 30px; /* Further reduce logo size on mobile */
+  }
 }
