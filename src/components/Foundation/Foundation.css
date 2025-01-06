@@ -1,55 +1,101 @@
 .foundation-cont {
-    position: relative;
-    height: 100vh; 
-    overflow: hidden;
-  }
-  
-  .background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2; 
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(8, 8, 24, 0.5);
-    z-index: -1;
-  }
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    text-align: center;
-    color: white; 
-    padding: 20px;
-  }
-  
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 8, 24, 0.5);
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.foundation {
+  font-size: 4rem;
+  margin: 0;
+  width: 800px;
+  font-weight: 800;
+}
+
+.p-text {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #ff7b00;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
   .foundation {
-    font-size: 4rem;
-    margin: 0;
-    width: 800px;
-    font-weight: 800;
+    font-size: 3rem;
+    width: 90%;
   }
-  
+
   .p-text {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .foundation {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+  .p-text {
+    font-size: 1.5rem;
+  }
+
+  .btn-container {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .foundation {
     font-size: 2rem;
     font-weight: 600;
     margin-top: 1rem;
     color: #C28720;
   }
-  
-  .btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+
+  .p-text {
+    font-size: 1.25rem;
   }
+
+  .btn-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
