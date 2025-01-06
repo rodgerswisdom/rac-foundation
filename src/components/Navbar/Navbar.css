@@ -36,28 +36,6 @@
   cursor: pointer;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 10px; /* Reduce gap between items on tablets */
-  }
-
-  .nav-links li {
-    padding: 8px;
-    font-size: 14px; /* Adjust font size for better spacing */
-  }
-
-  .nav-logo {
-    height: 40px; /* Adjust logo size for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-links {
-    flex-direction: column; /* Stack links vertically on mobile */
-    gap: 2px;
-  }
-
   .nav-links li {
     text-align: center;
     padding: 5px 5px;
@@ -67,4 +45,11 @@
   .nav-logo {
     height: 30px; /* Further reduce logo size on mobile */
   }
+.nav-links-li {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(28, 33, 138);
+  cursor: pointer;
+  text-decoration: none;
 }

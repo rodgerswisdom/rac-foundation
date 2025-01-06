@@ -10,13 +10,13 @@ function Navbar() {
             <img src={logo} alt="Logo" className="nav-logo" />
                 <ul className="nav-links">
                 <li>
-                    <NavLink to="/" end>
+                    <NavLink to="/" className="nav-links-li" end>
                         Home
                     </NavLink>
                 </li>
-                <li><NavLink to="/about-us">About Us</NavLink></li>
-                <li><Link to="/gallery">Gallery</Link></li>
-                <li><Link to="/contact-us">Contact Us</Link></li>
+                <li><NavLink to="/about-us" className="nav-links-li">About Us</NavLink></li>
+                <li><Link to="/gallery" className="nav-links-li">Gallery</Link></li>
+                <li><Link to="/contact-us" className="nav-links-li">Contact Us</Link></li>
                 </ul>
             </div>  
         </nav>
