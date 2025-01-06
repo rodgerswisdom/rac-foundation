@@ -1,0 +1,20 @@
+.our-causes {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.our-causes-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.our-causes-container {
+    display: flex;
+    flex-direction: row; /* Align cards in a row */
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Add space between cards */
+    flex-wrap: wrap; /* Allow wrapping to the next row for responsiveness */
+}
