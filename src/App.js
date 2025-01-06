@@ -5,8 +5,8 @@ import Foundation from "./components/Foundation/Foundation";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
 import AboutUs from "./pages/about-us/AboutUs";
-// import Gallery from "./pages/Gallery/Gallery";
-// import ContactUs from "./pages/ContactUs/ContactUs";
+import Gallery from "./pages/gallery/Gallery";
+import ContactUs from "./pages/contact-us/ContactUs";
 // import AboutUs from "./pages/about-us/AboutUs";
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
             </>
           } />
           <Route path="/about-us" element={<AboutUs />} />
-          {/* <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact-us" element={<ContactUs />} /> */}
+         <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
         <Footer />
       </div>
