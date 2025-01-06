@@ -1,15 +1,33 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Foundation from "./components/Foundation/Foundation";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
+import AboutUs from "./pages/about-us/AboutUs";
+// import Gallery from "./pages/Gallery/Gallery";
+// import ContactUs from "./pages/ContactUs/ContactUs";
+// import AboutUs from "./pages/about-us/AboutUs";
+
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Foundation />
-      <Body />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Foundation />
+              <Body />
+            </>
+          } />
+          <Route path="/about-us" element={<AboutUs />} />
+          {/* <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact-us" element={<ContactUs />} /> */}
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
