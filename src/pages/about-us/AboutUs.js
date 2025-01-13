@@ -25,7 +25,17 @@ const AboutUs = () => {
                             To promote the growth, development, and education of children in the community by seeking to meet their needs and mitigate their day-to-day challenges, ultimately empowering them to reach their full potential.
                         </p>
 
-                        <h2>Our Focus</h2>
+                       
+                    </>
+                }
+            />
+            <div className="spacer">
+            <Section1 
+                title = "Our Focus"
+                imageSrc={bodyImg}
+                textContent={
+                    <>
+                        {/* <h2>Our Focus</h2> */}
                         <ul>
                             <li>
                                 <strong>Education and Basic Needs:</strong> We provide essential amenities such as shoes, school bags, uniforms, and stationery to school-going children, focusing on those in dire need.
@@ -38,44 +48,61 @@ const AboutUs = () => {
                             </li>
                         </ul>
 
-                        <h2>Our Journey</h2>
-                        <div className="journey-timeline">
-                            <div className="timeline-item">
-                                <h3>2022: The Beginning</h3>
-                                <p>Our foundation took its first steps in 2022, driven by the desire to address the challenges faced by school-going children. We started by providing basic amenities such as shoes, school bags, uniforms, and stationery to those in dire need.</p>
-                            </div>
-                            <div className="timeline-item">
-                                <h3>2023: Expanding Our Reach</h3>
-                                <p>As we grew, we expanded our efforts to include campaigns against teen pregnancies, promoting menstrual health, and eradicating female genital mutilation (FGM). We began visiting children's homes, sharing their vision, and helping them attain the education they need by providing necessary supplies.</p>
-                            </div>
-                            <div className="timeline-item">
-                                <h3>2024: Empowering the Community</h3>
-                                <p>This year, we have continued to create awareness about menstrual hygiene and provide necessary supplies to needy children. Our efforts to promote education and eradicate early marriages are gaining momentum.</p>
-                            </div>
-                            <div className="timeline-item">
-                                <h3>Looking Ahead</h3>
-                                <p>Our journey is far from over. We aim to reach out to more donors, visit more schools and orphanages, and continue to make a positive impact on the lives of young boys and girls. With your support, we can create an equal society where all children can dream and drive significant changes.</p>
-                            </div>
-                        </div>
-
-                        <h2>Join Us</h2>
-                        <p>
-                            With your support, we can make a lasting impact on the lives of young boys and girls, creating a brighter future for our community. Together, we can ensure that every child has the opportunity to thrive and succeed.
-                        </p>
-
-                        <h2>Contact Us</h2>
-                        <p>
-                            <strong>Address:</strong> Raise A Child Foundation (RAC), [Your Address Here]<br />
-                            <strong>Phone:</strong> +254 728 759 690<br />
-                            <strong>Email:</strong> aderoannete@gmail.com
-                        </p>
-                        <p>
-                            Follow us on social media for the latest updates and news:
-                        </p>
                     </>
                 }
             />
-            <div className="spacer">
+            <div className="spacer"></div>
+                <Section1
+                    title="Our Journey"
+                    imageSrc={bodyImg}
+                    textContent={
+                        <>
+                            {/* <h2>Our Journey</h2> */}
+                            <div className="journey-timeline">
+                                <div className="timeline-item">
+                                    <h3>2022: The Beginning</h3>
+                                    <p>Our foundation took its first steps in 2022, driven by the desire to address the challenges faced by school-going children. We started by providing basic amenities such as shoes, school bags, uniforms, and stationery to those in dire need.</p>
+                                </div>
+                                <div className="timeline-item">
+                                    <h3>2023: Expanding Our Reach</h3>
+                                    <p>As we grew, we expanded our efforts to include campaigns against teen pregnancies, promoting menstrual health, and eradicating female genital mutilation (FGM). We began visiting children's homes, sharing their vision, and helping them attain the education they need by providing necessary supplies.</p>
+                                </div>
+                                <div className="timeline-item">
+                                    <h3>2024: Empowering the Community</h3>
+                                    <p>This year, we have continued to create awareness about menstrual hygiene and provide necessary supplies to needy children. Our efforts to promote education and eradicate early marriages are gaining momentum.</p>
+                                </div>
+                                <div className="timeline-item">
+                                    <h3>Looking Ahead</h3>
+                                    <p>Our journey is far from over. We aim to reach out to more donors, visit more schools and orphanages, and continue to make a positive impact on the lives of young boys and girls. With your support, we can create an equal society where all children can dream and drive significant changes.</p>
+                                </div>
+                            </div>
+                        </>
+                    }
+                />
+                <div className="spacer"></div>
+                <Section1
+                    title="Join Us"
+                    imageSrc={bodyImg}
+                    textContent={
+                        <>
+                            {/* <h2>Join Us</h2> */}
+                            <p>
+                                With your support, we can make a lasting impact on the lives of young boys and girls, creating a brighter future for our community. Together, we can ensure that every child has the opportunity to thrive and succeed.
+                            </p>
+
+                            <h2>Contact Us</h2>
+                            <p>
+                                <strong>Address:</strong> Raise A Child Foundation (RAC), [Your Address Here]<br />
+                                <strong>Phone:</strong> +254 728 759 690<br />
+                                <strong>Email:</strong> aderoannete@gmail.com
+                            </p>
+                            <p>
+                                Follow us on social media for the latest updates and news:
+                            </p>
+                        </>
+                    }
+                />
+                <div className="spacer"></div>
                 <hr />
             </div>
         </div>
