@@ -3,6 +3,7 @@ import Section1 from '../../components/Body/section-1';
 import bodyImg from "../../assets/background.jpg";
 import C2 from "../../assets/images/C2.jpeg";
 import G8 from "../../assets/images/G8.jpeg";
+import G11 from "../../assets/images/G11.jpeg";
 
 const AboutUs = () => {
     return (
@@ -84,7 +85,7 @@ const AboutUs = () => {
                 <div className="spacer"></div>
                 <Section1
                     title="Join Us"
-                    imageSrc={bodyImg}
+                    imageSrc={G11}
                     textContent={
                         <>
                             {/* <h2>Join Us</h2> */}
