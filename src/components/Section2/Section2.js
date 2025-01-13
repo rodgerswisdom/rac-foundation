@@ -1,8 +1,9 @@
 import React from "react";
 import Card1 from "../Body/card-1";
 import C1 from "../../assets/images/C1.jpeg";
-import  C2 from "../../assets/images/C2.jpeg";
+// import  C2 from "../../assets/images/C2.jpeg";
 import  C3 from "../../assets/images/C3.jpeg";
+import G7 from "../../assets/images/G7.jpeg";
 import "./Section2.css";
 
 function Section2() {
@@ -13,7 +14,7 @@ function Section2() {
             description: "Every child deserves the opportunity to learn and grow. We provide essential school supplies and amenities to ensure that no child is left behind due to lack of resources. Join us in empowering the next generation through education.",
         },
         {
-            imageSrc: C2,
+            imageSrc: G7,
             title: "Menstrual Health & Empowerment",
             description: "Promoting menstrual hygiene and education is crucial for the well-being of young girls. We campaign against teen pregnancies and work to eradicate female genital mutilation (FGM), ensuring that girls can thrive with dignity and confidence.",
         },
