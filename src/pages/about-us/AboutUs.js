@@ -1,6 +1,8 @@
 import React from 'react';
 import Section1 from '../../components/Body/section-1';
 import bodyImg from "../../assets/background.jpg";
+import C2 from "../../assets/images/C2.jpeg";
+import G8 from "../../assets/images/G8.jpeg";
 
 const AboutUs = () => {
     return (
@@ -32,7 +34,7 @@ const AboutUs = () => {
             <div className="spacer">
             <Section1 
                 title = "Our Focus"
-                imageSrc={bodyImg}
+                imageSrc={G8}
                 textContent={
                     <>
                         {/* <h2>Our Focus</h2> */}
@@ -54,7 +56,7 @@ const AboutUs = () => {
             <div className="spacer"></div>
                 <Section1
                     title="Our Journey"
-                    imageSrc={bodyImg}
+                    imageSrc={C2}
                     textContent={
                         <>
                             {/* <h2>Our Journey</h2> */}
