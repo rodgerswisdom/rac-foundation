@@ -2,97 +2,90 @@
   padding: 10px 20px;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 
 .nav-container {
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-logo {
   height: 50px;
-  margin-right: 20px;
-  position: absolute;
-  left: 20px;
 }
 
 .nav-toggle {
-  background:rgb(28, 33, 138);;
+  background: rgb(28, 33, 138);;
   border: none;
   font-size: 24px;
   cursor: pointer;
   display: none;
+  position: absolute;
+  right: 20px; /* Position toggle button at the right */
 }
 
 .nav-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li {
-  padding: 10px;
+.nav-links-li {
+  text-decoration: none;
   font-size: 16px;
   font-weight: 700;
   color: rgb(28, 33, 138);
   cursor: pointer;
 }
 
-/* Mobile Styles */
+.nav-links-li:hover {
+  color: #2259ab;
+}
+
+.nav-links.nav-open {
+  display: flex;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
   .nav-toggle {
-    display: block;
+    display: block; /* Show toggle button on smaller screens */
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    gap: 15px;
     position: absolute;
-    top: 100%;
-    right: 20px;
+    top: 60px;
+    right: 20px; /* Dropdown aligns to the right */
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
   }
 
-  .nav-links.open {
+  .nav-links.nav-open {
     display: flex;
   }
 
   .nav-logo {
     height: 40px;
-    left: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 5px 5px;
+  .nav-links-li {
     font-size: 14px;
+    padding: 8px 0;
   }
 
   .nav-logo {
-    height: 30px;
-    left: 10px;
+    height: 35px;
   }
-}
-
-.nav-links-li {
-  text-decoration: none;
-  color: rgb(28, 33, 138);
-  cursor: pointer;
-  font-weight: 700;
 }

@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <img src={logo} alt="Logo" className="nav-logo" />
-        <button className="nav-toggle" onClick={toggleNavbar}>
-          ☰
-        </button>
-        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+        <ul className={`nav-links ${isMenuOpen ? "nav-open" : ""}`}>
           <li>
             <NavLink to="/" className="nav-links-li" end>
               Home
@@ -40,6 +36,9 @@ function Navbar() {
             </Link>
           </li>
         </ul>
+        <button className="nav-toggle" onClick={handleToggleMenu}>
+          ☰
+        </button>
       </div>
     </nav>
   );
