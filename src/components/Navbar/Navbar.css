@@ -19,7 +19,7 @@
 }
 
 .nav-toggle {
-  background: rgb(28, 33, 138);;
+  background: rgb(28, 33, 138);
   border: none;
   font-size: 24px;
   cursor: pointer;
@@ -68,6 +68,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 8px;
+    z-index: 1000; /* Ensure the links are above other elements */
   }
 
   .nav-links.nav-open {
