@@ -44,9 +44,51 @@
 
 /* Text content styling */
 .text-content {
-    flex: 1; /* Takes up remaining space */
-    font-size: 16px;
-    line-height: 1.5;
-    color: #555;
+    /* Add your text content styles here */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .section-body {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-container {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-1 {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-1 {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
 }
 

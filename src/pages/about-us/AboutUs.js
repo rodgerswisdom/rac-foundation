@@ -13,7 +13,7 @@ const AboutUs = () => {
                 imageSrc={bodyImg}
                 textContent={
                     <>
-                        <h1>About Us</h1>
+                        {/* <h1>About Us</h1> */}
                         <p>
                             <strong>Raise A Child Foundation (RAC)</strong> is a Kenyan non-governmental organization dedicated to improving the lives of needy children in our society. Founded by <strong>Annete Achieng Adero</strong>, our mission is to create an equal society where all children can dream and drive significant changes.
                         </p>
