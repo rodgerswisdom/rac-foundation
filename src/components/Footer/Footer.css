@@ -14,7 +14,7 @@
 
 .footer-column {
     padding: 0 10px;
-    flex: 1 1 300px;
+    /* flex: 1 1 30px; */
 }
 
 .footer-column h3 {
@@ -67,6 +67,21 @@
     margin-top: -60px;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the gap as needed */
+    padding: 20px;
+    background-color: #f1f1f1; /* Example background color */
+}
+
+.footer-item {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
 /* Responsive for tablets and smaller devices */
 @media (max-width: 768px) {
     .footer-container {
@@ -78,6 +93,10 @@
     }
     .footer-bottom-text {
         font-size: 12px;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 

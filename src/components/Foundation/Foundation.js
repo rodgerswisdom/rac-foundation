@@ -11,10 +11,10 @@ function Foundation() {
             <div className="content">
                 <h1 className="foundation">Raise a Child Foundation</h1>
                 <p className="p-text">Aid a child, improve the community</p>
-                <div className="btn-container">
+                {/* <div className="btn-container">
                     <Button1 />
                     <Button2 />
-                </div>
+                </div> */}
             </div>
         </div>
     );
