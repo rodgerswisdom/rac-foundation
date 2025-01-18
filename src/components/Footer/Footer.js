@@ -7,10 +7,10 @@ function Footer() {
                 <div className="footer-column">
                     {/* <h3>Useful Links</h3> */}
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#mission">Mission</a></li>
-                        <li><a href="#vision">Vision</a></li>
-                        <li><a href="#news">News & Events</a></li>
+                        <li><a href="https://rac-foundation.org/about-us">About Us</a></li>
+                        <li><a href="https://rac-foundation.org/about-us">Mission</a></li>
+                        <li><a href="https://rac-foundation.org/about-us">Vision</a></li>
+                        <li><a href="https://rac-foundation.org/about-us">News & Events</a></li>
                         
                     </ul>
                 </div>
@@ -19,7 +19,7 @@ function Footer() {
                     <ul>
                         <li><a href="#consulting">FAQs</a></li>
                         <li><a href="#development">Help Center</a></li>
-                        <li><a href="#contact-us">Contact us</a></li>
+                        <li><a href="https://rac-foundation.org/contact-us">Contact us</a></li>
                         <li><a href="#terms">Terms & Conditions</a></li>
                     </ul>
                 </div>
