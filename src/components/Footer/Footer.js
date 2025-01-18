@@ -5,7 +5,7 @@ function Footer() {
         <>
             <div className="footer-container">
                 <div className="footer-column">
-                    <h3>Useful Links</h3>
+                    {/* <h3>Useful Links</h3> */}
                     <ul>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#mission">Mission</a></li>
@@ -16,14 +16,14 @@ function Footer() {
                     </ul>
                 </div>
                 <div className="footer-column">
-                    <h3>Support</h3>
+                    {/* <h3>Support</h3> */}
                     <ul>
                         <li><a href="#consulting">FAQs</a></li>
                         <li><a href="#development">Help Center</a></li>
                     </ul>
                 </div>
                 <div className="footer-column">
-                    <h3>Follow Us</h3>
+                    {/* <h3>Follow Us</h3> */}
                     <ul>
                         <li><a href="#email">Facebook</a></li>
                         <li><a href="#phone">Instagram</a></li>

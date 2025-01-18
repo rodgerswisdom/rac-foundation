@@ -10,6 +10,10 @@
   transition: background-color 0.3s;
 }
 
+.support-us:hover {
+  background-color: #a76b1a; /* Darker shade on hover */
+}
+
 /* Responsive styles for tablets */
 @media (max-width: 768px) {
   .support-us {
