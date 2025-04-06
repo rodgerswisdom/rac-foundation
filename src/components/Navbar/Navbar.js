@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {

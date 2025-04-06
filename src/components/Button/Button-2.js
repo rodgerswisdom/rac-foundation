@@ -1,10 +1,11 @@
+import React from "react";
 import "./Button-2.css";
 
 function Button2() {
-    return(
-        <a href="https://rac-foundation.org/about-us">
-        <button className="learn-more additional">Learn More</button>
-        </a>
+    return (
+        <button className="button-2">
+            <span>Learn More</span>
+        </button>
     )
 }
 

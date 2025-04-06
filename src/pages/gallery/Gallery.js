@@ -1,4 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import GalleryCard from '../../components/GalleryCard/GalleryCard';
+import './Gallery.css';
+
+// Import all available images
 import G1 from '../../assets/images/G1.jpeg';
 import G2 from '../../assets/images/G2.jpeg';
 import G3 from '../../assets/images/G3.jpeg';
@@ -11,7 +16,6 @@ import G9 from '../../assets/images/G9.jpeg';
 import G10 from '../../assets/images/G10.jpeg';
 import G11 from '../../assets/images/G11.jpeg';
 import G12 from '../../assets/images/G12.jpeg';
-// import G13 from '../../assets/images/G13.jpeg';
 import G14 from '../../assets/images/G14.jpeg';
 import G15 from '../../assets/images/G15.jpeg';
 import G16 from '../../assets/images/G16.jpeg';
@@ -26,69 +30,176 @@ import G24 from '../../assets/images/G24.jpeg';
 import G25 from '../../assets/images/G25.jpeg';
 import G26 from '../../assets/images/G26.jpeg';
 import G27 from '../../assets/images/G27.jpeg';
-// import G3 from '../../assets/images/G3.jpeg';
-import './Gallery.css';
 
-const images = [
-    G1,
-    G2,
-    G3,
-    G4,
-    G5,
-    G6,
-    G7,
-    G8,
-    G9,
-    G10,
-    G11,
-    G12,
-    // G13,
-    G14,
-    G15,
-    G16,
-    G17,
-    G18,
-    G19,
-    G20,
-    G21,
-    G22,
-    G23,
-    G24,
-    G25,
-    G26,
-    G27,
-];
+// Organize images by category with error handling
+const imageCategories = {
+    education: [
+        { image: G1, category: 'Education', title: 'Education Initiative 1' },
+        { image: G2, category: 'Education', title: 'Education Initiative 2' },
+        { image: G3, category: 'Education', title: 'Education Initiative 3' },
+        { image: G4, category: 'Education', title: 'Education Initiative 4' },
+        { image: G5, category: 'Education', title: 'Education Initiative 5' }
+    ],
+    health: [
+        { image: G6, category: 'Health', title: 'Health Program 1' },
+        { image: G7, category: 'Health', title: 'Health Program 2' },
+        { image: G8, category: 'Health', title: 'Health Program 3' },
+        { image: G9, category: 'Health', title: 'Health Program 4' },
+        { image: G10, category: 'Health', title: 'Health Program 5' }
+    ],
+    community: [
+        { image: G11, category: 'Community', title: 'Community Event 1' },
+        { image: G12, category: 'Community', title: 'Community Event 2' },
+        { image: G14, category: 'Community', title: 'Community Event 3' },
+        { image: G15, category: 'Community', title: 'Community Event 4' },
+        { image: G16, category: 'Community', title: 'Community Event 5' }
+    ],
+    events: [
+        { image: G17, category: 'Events', title: 'Special Event 1' },
+        { image: G18, category: 'Events', title: 'Special Event 2' },
+        { image: G19, category: 'Events', title: 'Special Event 3' },
+        { image: G20, category: 'Events', title: 'Special Event 4' },
+        { image: G21, category: 'Events', title: 'Special Event 5' }
+    ],
+    other: [
+        { image: G22, category: 'Other', title: 'Other Activity 1' },
+        { image: G23, category: 'Other', title: 'Other Activity 2' },
+        { image: G24, category: 'Other', title: 'Other Activity 3' },
+        { image: G25, category: 'Other', title: 'Other Activity 4' },
+        { image: G26, category: 'Other', title: 'Other Activity 5' },
+        { image: G27, category: 'Other', title: 'Other Activity 6' }
+    ]
+};
+
+// Flatten for initial display
+const allImages = Object.values(imageCategories).flat();
 
 const Gallery = () => {
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [activeCategory, setActiveCategory] = useState('all');
+    const [filteredImages, setFilteredImages] = useState(allImages);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+        initialInView: true
+    });
 
-    const handleImageClick = (image) => {
-        setSelectedImage(image);
-    };
+    // Handle image loading
+    useEffect(() => {
+        const loadImages = async () => {
+            setIsLoading(true);
+            setError(null);
+            try {
+                // Preload images
+                const imagePromises = allImages.map(item => {
+                    return new Promise((resolve, reject) => {
+                        const img = new Image();
+                        img.src = item.image;
+                        img.onload = resolve;
+                        img.onerror = () => reject(new Error(`Failed to load image: ${item.image}`));
+                    });
+                });
 
-    const handleCloseClick = () => {
-        setSelectedImage(null);
+                await Promise.all(imagePromises);
+                // Simulate minimum loading time for better UX
+                await new Promise(resolve => setTimeout(resolve, 500));
+                setIsLoading(false);
+            } catch (err) {
+                console.error('Error loading images:', err);
+                setError('Some images failed to load. Please try refreshing the page.');
+                setIsLoading(false);
+            }
+        };
+        
+        loadImages();
+    }, []);
+
+    // Filter images when category changes
+    useEffect(() => {
+        if (activeCategory === 'all') {
+            setFilteredImages(allImages);
+        } else {
+            setFilteredImages(imageCategories[activeCategory] || []);
+        }
+    }, [activeCategory]);
+
+    const handleCategoryChange = (category) => {
+        setActiveCategory(category);
     };
 
     return (
-        <div className="gallery">
-            {images.map((image, index) => (
-                <img
-                    key={index}
-                    src={image}
-                    alt={`Gallery ${index}`}
-                    className="gallery-image"
-                    onClick={() => handleImageClick(image)}
-                />
-            ))}
+        <section className={`gallery-section ${inView ? 'fade-in' : ''}`} ref={ref}>
+            <div className="gallery-header">
+                <h2 className="gallery-title">Our Gallery</h2>
+                <p className="gallery-subtitle">
+                    Capturing moments of impact and change in our community
+                </p>
+                
+                <div className="filter-buttons">
+                    <button 
+                        className={`filter-btn ${activeCategory === 'all' ? 'active' : ''}`}
+                        onClick={() => handleCategoryChange('all')}
+                        aria-label="Show all images"
+                    >
+                        All Images
+                    </button>
+                    <button 
+                        className={`filter-btn ${activeCategory === 'education' ? 'active' : ''}`}
+                        onClick={() => handleCategoryChange('education')}
+                        aria-label="Filter by education"
+                    >
+                        Education
+                    </button>
+                    <button 
+                        className={`filter-btn ${activeCategory === 'health' ? 'active' : ''}`}
+                        onClick={() => handleCategoryChange('health')}
+                        aria-label="Filter by health"
+                    >
+                        Health
+                    </button>
+                    <button 
+                        className={`filter-btn ${activeCategory === 'community' ? 'active' : ''}`}
+                        onClick={() => handleCategoryChange('community')}
+                        aria-label="Filter by community"
+                    >
+                        Community
+                    </button>
+                    <button 
+                        className={`filter-btn ${activeCategory === 'events' ? 'active' : ''}`}
+                        onClick={() => handleCategoryChange('events')}
+                        aria-label="Filter by events"
+                    >
+                        Events
+                    </button>
+                </div>
+            </div>
 
-            {selectedImage && (
-                <div className="modal" onClick={handleCloseClick}>
-                    <span className="close">&times;</span>
-                    <img className="modal-content" src={selectedImage} alt="Expanded" />
+            {error && (
+                <div className="error-message">
+                    {error}
                 </div>
             )}
-        </div>
+
+            <div className="gallery-container">
+                {isLoading ? (
+                    <div className="loading-skeleton">
+                        {[...Array(12)].map((_, index) => (
+                            <div key={index} className="skeleton-item"></div>
+                        ))}
+                    </div>
+                ) : (
+                    filteredImages.map((item, index) => (
+                        <GalleryCard
+                            key={index}
+                            image={item.image}
+                            alt={item.title}
+                            category={item.category}
+                        />
+                    ))
+                )}
+            </div>
+        </section>
     );
 };
 

@@ -1,3 +1,4 @@
+import React from "react";
 import "./Foundation.css";
 import bgImage from "../../assets/background.jpg";
 import Button1 from "../Button/Button-1";
