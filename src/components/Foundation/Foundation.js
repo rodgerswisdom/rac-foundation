@@ -1,8 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Foundation.css";
 import bgImage from "../../assets/background.jpg";
-import Button1 from "../Button/Button-1";
-import Button2 from "../Button/Button-2";
 
 function Foundation() {
     return (
@@ -13,8 +12,12 @@ function Foundation() {
                 <h1 className="foundation">Raise a Child Foundation</h1>
                 <p className="p-text">Aid a child, improve the community</p>
                 <div className="btn-container">
-                    {/* <Button1 /> */}
-                    <Button2 />
+                    <Link to="/about-us" className="cta-button learn-more">
+                        <span>Learn More</span>
+                    </Link>
+                    {/* <Link to="/donate" className="cta-button donate">
+                        <span>Donate</span>
+                    </Link> */}
                 </div>
             </div>
         </div>

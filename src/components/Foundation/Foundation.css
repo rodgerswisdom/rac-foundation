@@ -61,9 +61,96 @@
 
 .btn-container {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
+  margin-top: 2rem;
   justify-content: center;
-  margin-top: 30px;
+  align-items: center;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  min-width: 160px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover::before {
+  transform: scale(1.1);
+}
+
+.cta-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button.learn-more {
+  background-color: rgba(31, 50, 110, 0.4);
+  color: var(--white);
+  border: 2px solid var(--secondary-color);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(31, 50, 110, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button.learn-more::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(31, 50, 110, 0.6),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cta-button.learn-more:hover {
+  background-color: rgba(31, 50, 110, 0.6);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(31, 50, 110, 0.7);
+}
+
+.cta-button.donate {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: 2px solid var(--secondary-color);
+}
+
+.cta-button.donate:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(194, 135, 32, 0.3);
 }
 
 @keyframes fadeInUp {
@@ -89,7 +176,14 @@
 
   .btn-container {
     flex-direction: column;
+    gap: 1rem;
     align-items: center;
+  }
+
+  .cta-button {
+    width: 80%;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
