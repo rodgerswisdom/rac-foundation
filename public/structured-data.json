@@ -1,0 +1,63 @@
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "RAC Foundation",
+  "alternateName": "RAC",
+  "description": "RAC Foundation is a non-profit organization dedicated to empowering communities through education, health, and sustainable development initiatives in Kenya.",
+  "url": "https://rac-foundation.org",
+  "logo": "https://rac-foundation.org/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/racfoundation",
+    "https://twitter.com/racfoundation",
+    "https://www.instagram.com/racfoundation",
+    "https://www.linkedin.com/company/rac-foundation"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "P.O Box 123",
+    "addressLocality": "Nairobi",
+    "addressRegion": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+254-XXX-XXX-XXX",
+    "contactType": "customer service",
+    "email": "info@rac-foundation.org"
+  },
+  "foundingDate": "2020",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Kenya"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Programs",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Education Initiatives",
+          "description": "Providing quality education and learning resources to communities"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Health Programs",
+          "description": "Improving community health through various healthcare initiatives"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Community Development",
+          "description": "Empowering communities through sustainable development projects"
+        }
+      }
+    ]
+  }
+} 

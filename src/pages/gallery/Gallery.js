@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import GalleryCard from '../../components/GalleryCard/GalleryCard';
+import SEO from '../../components/SEO/SEO';
 import './Gallery.css';
 
 // Import all available images
@@ -129,77 +130,87 @@ const Gallery = () => {
     };
 
     return (
-        <section className={`gallery-section ${inView ? 'fade-in' : ''}`} ref={ref}>
-            <div className="gallery-header">
-                <h2 className="gallery-title">Our Gallery</h2>
-                <p className="gallery-subtitle">
-                    Capturing moments of impact and change in our community
-                </p>
-                
-                <div className="filter-buttons">
-                    <button 
-                        className={`filter-btn ${activeCategory === 'all' ? 'active' : ''}`}
-                        onClick={() => handleCategoryChange('all')}
-                        aria-label="Show all images"
-                    >
-                        All Images
-                    </button>
-                    <button 
-                        className={`filter-btn ${activeCategory === 'education' ? 'active' : ''}`}
-                        onClick={() => handleCategoryChange('education')}
-                        aria-label="Filter by education"
-                    >
-                        Education
-                    </button>
-                    <button 
-                        className={`filter-btn ${activeCategory === 'health' ? 'active' : ''}`}
-                        onClick={() => handleCategoryChange('health')}
-                        aria-label="Filter by health"
-                    >
-                        Health
-                    </button>
-                    <button 
-                        className={`filter-btn ${activeCategory === 'community' ? 'active' : ''}`}
-                        onClick={() => handleCategoryChange('community')}
-                        aria-label="Filter by community"
-                    >
-                        Community
-                    </button>
-                    <button 
-                        className={`filter-btn ${activeCategory === 'events' ? 'active' : ''}`}
-                        onClick={() => handleCategoryChange('events')}
-                        aria-label="Filter by events"
-                    >
-                        Events
-                    </button>
-                </div>
-            </div>
-
-            {error && (
-                <div className="error-message">
-                    {error}
-                </div>
-            )}
-
-            <div className="gallery-container">
-                {isLoading ? (
-                    <div className="loading-skeleton">
-                        {[...Array(12)].map((_, index) => (
-                            <div key={index} className="skeleton-item"></div>
-                        ))}
+        <>
+            <SEO 
+                title="Photo Gallery"
+                description="Explore our photo gallery showcasing RAC Foundation's impact through education, health, community development, and special events. See the faces and stories behind our mission."
+                keywords="RAC Foundation gallery, community photos, education initiatives, health programs, community events, Kenya development, NGO photos"
+                ogImage={G1}
+                ogUrl={window.location.href}
+                canonicalUrl={window.location.href}
+            />
+            <section className={`gallery-section ${inView ? 'fade-in' : ''}`} ref={ref}>
+                <div className="gallery-header">
+                    <h1 className="gallery-title">Our Gallery</h1>
+                    <p className="gallery-subtitle">
+                        Capturing moments of impact and change in our community
+                    </p>
+                    
+                    <div className="filter-buttons">
+                        <button 
+                            className={`filter-btn ${activeCategory === 'all' ? 'active' : ''}`}
+                            onClick={() => handleCategoryChange('all')}
+                            aria-label="Show all images"
+                        >
+                            All Images
+                        </button>
+                        <button 
+                            className={`filter-btn ${activeCategory === 'education' ? 'active' : ''}`}
+                            onClick={() => handleCategoryChange('education')}
+                            aria-label="Filter by education"
+                        >
+                            Education
+                        </button>
+                        <button 
+                            className={`filter-btn ${activeCategory === 'health' ? 'active' : ''}`}
+                            onClick={() => handleCategoryChange('health')}
+                            aria-label="Filter by health"
+                        >
+                            Health
+                        </button>
+                        <button 
+                            className={`filter-btn ${activeCategory === 'community' ? 'active' : ''}`}
+                            onClick={() => handleCategoryChange('community')}
+                            aria-label="Filter by community"
+                        >
+                            Community
+                        </button>
+                        <button 
+                            className={`filter-btn ${activeCategory === 'events' ? 'active' : ''}`}
+                            onClick={() => handleCategoryChange('events')}
+                            aria-label="Filter by events"
+                        >
+                            Events
+                        </button>
                     </div>
-                ) : (
-                    filteredImages.map((item, index) => (
-                        <GalleryCard
-                            key={index}
-                            image={item.image}
-                            alt={item.title}
-                            category={item.category}
-                        />
-                    ))
+                </div>
+
+                {error && (
+                    <div className="error-message">
+                        {error}
+                    </div>
                 )}
-            </div>
-        </section>
+
+                <div className="gallery-container">
+                    {isLoading ? (
+                        <div className="loading-skeleton">
+                            {[...Array(12)].map((_, index) => (
+                                <div key={index} className="skeleton-item"></div>
+                            ))}
+                        </div>
+                    ) : (
+                        filteredImages.map((item, index) => (
+                            <GalleryCard
+                                key={index}
+                                image={item.image}
+                                alt={item.title}
+                                category={item.category}
+                            />
+                        ))
+                    )}
+                </div>
+            </section>
+        </>
     );
 };
 

@@ -1,0 +1,38 @@
+{
+  "short_name": "RAC Foundation",
+  "name": "RAC Foundation - Empowering Communities",
+  "description": "RAC Foundation is dedicated to empowering communities through education, health, and sustainable development initiatives in Kenya.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#C28720",
+  "background_color": "#ffffff",
+  "categories": ["nonprofit", "education", "health", "community"],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-US",
+  "dir": "ltr",
+  "orientation": "any",
+  "prefer_related_applications": false
+} 
