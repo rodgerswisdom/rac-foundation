@@ -31,6 +31,11 @@ import G24 from '../../assets/images/G24.jpeg';
 import G25 from '../../assets/images/G25.jpeg';
 import G26 from '../../assets/images/G26.jpeg';
 import G27 from '../../assets/images/G27.jpeg';
+import H1 from '../../assets/images/H18.55.jpeg';
+import H2 from '../../assets/images/H18.56.jpeg';
+import H3 from '../../assets/images/H18.57.jpeg';
+import H4 from '../../assets/images/H18.58.jpeg';
+import H5 from '../../assets/images/H18.59.jpeg';
 
 // Organize images by category with error handling
 const imageCategories = {
@@ -39,7 +44,12 @@ const imageCategories = {
         { image: G2, category: 'Education', title: 'Education Initiative 2' },
         { image: G3, category: 'Education', title: 'Education Initiative 3' },
         { image: G4, category: 'Education', title: 'Education Initiative 4' },
-        { image: G5, category: 'Education', title: 'Education Initiative 5' }
+        { image: G5, category: 'Education', title: 'Education Initiative 5' },
+        { image: H1, category: 'Education', title: 'Education Initiative 6' },
+        { image: H2, category: 'Education', title: 'Education Initiative 7' },
+        { image: H3, category: 'Education', title: 'Education Initiative 8' },
+        { image: H4, category: 'Education', title: 'Education Initiative 9' },
+        { image: H5, category: 'Education', title: 'Education Initiative 10' }
     ],
     health: [
         { image: G6, category: 'Health', title: 'Health Program 1' },
