@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import GalleryCard from '../../components/GalleryCard/GalleryCard';
 import SEO from '../../components/SEO/SEO';
-import './Gallery.css';
+import './Gallery.css'; // Make sure this import is not commented out
 
 // Import all available images
 import G1 from '../../assets/images/G1.jpeg';
@@ -83,7 +83,7 @@ const Gallery = () => {
     const { ref, inView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
-        initialInView: true
+        initialInView: false // Changed to false to ensure animation works
     });
 
     // Handle image loading
@@ -102,7 +102,11 @@ const Gallery = () => {
                     });
                 });
 
-                await Promise.all(imagePromises);
+                await Promise.all(imagePromises).catch(err => {
+                    console.warn('Some images failed to preload, but we will continue:', err);
+                    // We don't fail completely here, just log the warning
+                });
+                
                 // Simulate minimum loading time for better UX
                 await new Promise(resolve => setTimeout(resolve, 500));
                 setIsLoading(false);
@@ -128,6 +132,17 @@ const Gallery = () => {
     const handleCategoryChange = (category) => {
         setActiveCategory(category);
     };
+
+    // Force the section to be visible after a short delay if inView doesn't trigger
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            const section = document.querySelector('.gallery-section');
+            if (section && !section.classList.contains('fade-in')) {
+                section.classList.add('fade-in');
+            }
+        }, 1000);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <>
@@ -181,6 +196,13 @@ const Gallery = () => {
                             aria-label="Filter by events"
                         >
                             Events
+                        </button>
+                        <button 
+                            className={`filter-btn ${activeCategory === 'other' ? 'active' : ''}`}
+                            onClick={() => handleCategoryChange('other')}
+                            aria-label="Filter by other"
+                        >
+                            Other
                         </button>
                     </div>
                 </div>
