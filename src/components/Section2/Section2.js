@@ -54,8 +54,8 @@ function Section2() {
             aria-label="Our Causes"
         >
             <div className="our-causes-header">
-                <h2 className="our-causes-title">Our Causes</h2>
-                <p className="our-causes-subtitle">
+                <h2 className="section-title">Our Causes</h2>
+                <p className="section-subtitle">
                     Making a difference in children's lives through education, health, and community support
                 </p>
                 
