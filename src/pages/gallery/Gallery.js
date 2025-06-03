@@ -43,6 +43,46 @@ import H9 from '../../assets/images/H9.jpeg';
 import H10 from '../../assets/images/H10.jpeg';
 import H11 from '../../assets/images/H11.jpeg';
 import H12 from '../../assets/images/H12.jpeg';
+import I1 from '../../assets/images/I1.jpeg';
+import I2 from '../../assets/images/I2.jpeg';
+import I3 from '../../assets/images/I3.jpeg';
+import I4 from '../../assets/images/I4.jpeg';
+import I5 from '../../assets/images/I5.jpeg';
+import I6 from '../../assets/images/I6.jpeg';
+import I7 from '../../assets/images/I7.jpeg';
+import I8 from '../../assets/images/I8.jpeg';
+import I9 from '../../assets/images/I9.jpeg';
+import I10 from '../../assets/images/I10.jpeg';
+import I11 from '../../assets/images/I11.jpeg';
+import I12 from '../../assets/images/I12.jpeg';
+// import I13 from '../../assets/images/I13.jpeg';
+import I14 from '../../assets/images/I14.jpeg';
+import I15 from '../../assets/images/I15.jpeg';
+import I16 from '../../assets/images/I16.jpeg';
+import I17 from '../../assets/images/I17.jpeg';
+import I18 from '../../assets/images/I18.jpeg';
+import I19 from '../../assets/images/I19.jpeg';
+import I20 from '../../assets/images/I20.jpeg';
+import I21 from '../../assets/images/I21.jpeg';
+import I22 from '../../assets/images/I22.jpeg';
+import I23 from '../../assets/images/I23.jpeg';
+import I24 from '../../assets/images/I24.jpeg';
+import I25 from '../../assets/images/I25.jpeg';
+import I26 from '../../assets/images/I26.jpeg';
+import I27 from '../../assets/images/I27.jpeg';
+import I28 from '../../assets/images/I28.jpeg';
+import I29 from '../../assets/images/I29.jpeg';
+import I30 from '../../assets/images/I30.jpeg';
+import I31 from '../../assets/images/I31.jpeg';
+import I32 from '../../assets/images/I32.jpeg';
+import I33 from '../../assets/images/I33.jpeg';
+import I34 from '../../assets/images/I34.jpeg';
+import I35 from '../../assets/images/I35.jpeg';
+import I36 from '../../assets/images/I36.jpeg';
+import I37 from '../../assets/images/I37.jpeg';
+import I38 from '../../assets/images/I38.jpeg';
+import I39 from '../../assets/images/I39.jpeg';
+import I40 from '../../assets/images/I40.jpeg';
 
 // Organize images by category with error handling
 const imageCategories = {
@@ -93,7 +133,49 @@ const imageCategories = {
         { image: G25, category: 'Other', title: 'Other Activity 4' },
         { image: G26, category: 'Other', title: 'Other Activity 5' },
         { image: G27, category: 'Other', title: 'Other Activity 6' }
-    ]
+    ],
+    menstrualHealth: [
+        { image: I1, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 1' },
+        { image: I2, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 2' },
+        { image: I3, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 3' },
+        { image: I4, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 4' },
+        { image: I5, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 5' },
+        { image: I6, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 6' },
+        { image: I7, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 7' },
+        { image: I8, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 8' },
+        { image: I9, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 9' },
+        { image: I10, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 10' },
+        { image: I11, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 11' },
+        { image: I12, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 12' },
+        // { image: I13, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 13' },
+        { image: I14, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 14' },
+        { image: I15, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 15' },
+        { image: I16, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 16' },
+        { image: I17, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 17' },
+        { image: I18, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 18' },
+        { image: I19, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 19' },
+        { image: I20, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 20' },
+        { image: I21, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 21' },
+        { image: I22, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 22' },
+        { image: I23, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 23' },
+        { image: I24, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 24' },
+        { image: I25, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 25' },
+        { image: I26, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 26' },
+        { image: I27, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 27' },
+        { image: I28, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 28' },
+        { image: I29, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 29' },
+        { image: I30, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 30' },
+        { image: I31, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 31' },
+        { image: I32, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 32' },
+        { image: I33, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 33' },
+        { image: I34, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 34' },
+        { image: I35, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 35' },
+        { image: I36, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 36' },
+        { image: I37, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 37' },
+        { image: I38, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 38' },
+        { image: I39, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 39' },
+        { image: I40, category: 'Menstrual Health', title: 'Menstrual Health & School Girls 40' }
+    ],
 };
 
 // Flatten for initial display
@@ -227,6 +309,13 @@ const Gallery = () => {
                             aria-label="Filter by other"
                         >
                             Other
+                        </button>
+                        <button 
+                            className={`filter-btn ${activeCategory === 'menstrualHealth' ? 'active' : ''}`}
+                            onClick={() => handleCategoryChange('menstrualHealth')}
+                            aria-label="Filter by menstrual health"
+                        >
+                            Menstrual Health
                         </button>
                     </div>
                 </div>
